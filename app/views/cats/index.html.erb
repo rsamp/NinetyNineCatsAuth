@@ -1,0 +1,11 @@
+<h1>Cats upon cats!</h1>
+
+<ul>
+  <% @cats.each do |cat| %>
+    <li><%= link_to cat.name, cat_url(cat) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create cat", new_cat_url %>
+<br>
+<%= link_to("Request Cat", new_cat_rental_request_url, method: :get)%>
